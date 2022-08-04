@@ -14,6 +14,9 @@
 
 .advantages__item {
   &--wide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-weight: 700;
     color: #ffffff;
     background-color: #81b3d2;
@@ -25,7 +28,9 @@
 }
 
 .advantages__item-picture {
-
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
 }
 
 .advantages__item-text-content {
@@ -35,9 +40,10 @@
 @media (min-width: @tablet-width) {
   .advantages__item {
     min-height: 256px;
+
     &--wide {
       display: grid;
-      grid-template-columns: minmax(256px, 1fr) minmax(256px, 1fr) minmax(256px, 1fr);
+      grid-template-columns: repeat(3, minmax(256px, 1fr));
       grid-column: span 3;
     }
 
@@ -61,6 +67,6 @@
 
   .advantages__list {
     display: grid;
-    grid-template-columns: repeat(minmax(256px, 1fr), 3);
+    grid-template-columns: repeat(3, minmax(256px, 1fr));
   }
 }

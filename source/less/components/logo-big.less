@@ -5,7 +5,7 @@
   text-align: center;
 
   background-color: #d8e6f1;
-  background-image: url("../../img/back-desktop.jpg.jpg");
+  background-image: url("../../img/intro-mobile.jpg");
   background-position: 50% 0%;
   background-repeat: no-repeat;
 }
@@ -13,10 +13,25 @@
 @media (min-width: @tablet-width) {
   .logo-big {
     padding-top: 70px;
+    background-image: url("../../img/intro-tablet-desktop.jpg");
   }
 
   .logo-big__img {
     width: 461px;
     height: 360px;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .logo-big {
+    background-image: url("../../img/intro-mobile@2x.jpg");
+    background-size: 768px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    .logo-big {
+      background-image: url("../../img/intro-tablet-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 }
